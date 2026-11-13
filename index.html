@@ -407,7 +407,7 @@
   <script>
     const LINKS = {
       grupoPrevias: "https://t.me/Anaallicebot?",
-      converseComigo: ""
+      converseComigo: "https://w.app/d5aumg"
     };
 
     const modal = document.getElementById('modal');
@@ -425,12 +425,7 @@
       }
     }
     setup('grupo', LINKS.grupoPrevias);
-    // O botão do WhatsApp permanece visível, mas sem link nem ação de clique.
-    const whatsappButton = document.getElementById('conversa');
-    whatsappButton.removeAttribute('href');
-    whatsappButton.removeAttribute('target');
-    whatsappButton.removeAttribute('rel');
-    whatsappButton.style.cursor = 'default';
+    setup('conversa', LINKS.converseComigo);
 
     document.getElementById('close-modal').addEventListener('click', () => modal.classList.remove('open'));
     modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
